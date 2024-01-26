@@ -1,4 +1,5 @@
 ﻿using AncientPoetry.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace AncientPoetry.Entities
 {
@@ -10,6 +11,7 @@ namespace AncientPoetry.Entities
         /// <summary>
         /// 名称
         /// </summary>
+        [Required]
         public string Name { get; set; }
         public string? Remark { get; set; }
     }

@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AncientPoetry.DbStructure\AncientPoetry.DbStructure.csproj" />
+    <ProjectReference Include="..\AncientPoetry.IRepository\AncientPoetry.IRepository.csproj" />
+    <ProjectReference Include="..\AncientPoetry.Repository\AncientPoetry.Repository.csproj" />
   </ItemGroup>
 
 </Project>

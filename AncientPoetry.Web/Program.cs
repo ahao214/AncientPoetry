@@ -1,4 +1,6 @@
 using AncientPoetry.DbStructure.DbContexts;
+using AncientPoetry.IRepository.BaseFiles;
+using AncientPoetry.Repository.BaseFiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
+// ×¢²á·þÎñ
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
