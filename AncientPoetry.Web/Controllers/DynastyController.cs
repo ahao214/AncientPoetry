@@ -70,5 +70,32 @@ namespace AncientPoetry.Web.Controllers
 
         #endregion
 
+        #region 删除
+
+        public IActionResult Delete(int dynastyId)
+        {
+            Dynasty? dynasty = _unitOfWork.Dynasty.Get(u => u.Id == dynastyId);
+            if (dynasty == null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+            return View(dynasty);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Dynasty dynasty)
+        {
+            Dynasty? objFromDb = _unitOfWork.Dynasty.Get(u => u.Id == dynasty.Id);
+            if (objFromDb is not null)
+            {
+                _unitOfWork.Dynasty.Remove(objFromDb);
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+
+        #endregion
+
     }
 }
