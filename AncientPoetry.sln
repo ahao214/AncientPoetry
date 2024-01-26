@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AncientPoetry.DbStructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AncientPoetry.Entities", "AncientPoetry.Entities\AncientPoetry.Entities.csproj", "{5050EEE4-B0AD-4439-A6F8-1B6C21D88AC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AncientPoetry.IRepository", "AncientPoetry.IRepository\AncientPoetry.IRepository.csproj", "{1E75AA21-CADD-4D2B-AAF8-E13DD300A38A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AncientPoetry.Repository", "AncientPoetry.Repository\AncientPoetry.Repository.csproj", "{D1A8C961-8893-4F3B-93C9-1D4B6AFFB13A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{1D6585DC-9E86-4680-B73F-A43D77DB04C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,21 @@ Global
 		{5050EEE4-B0AD-4439-A6F8-1B6C21D88AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5050EEE4-B0AD-4439-A6F8-1B6C21D88AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5050EEE4-B0AD-4439-A6F8-1B6C21D88AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E75AA21-CADD-4D2B-AAF8-E13DD300A38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E75AA21-CADD-4D2B-AAF8-E13DD300A38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E75AA21-CADD-4D2B-AAF8-E13DD300A38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E75AA21-CADD-4D2B-AAF8-E13DD300A38A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A8C961-8893-4F3B-93C9-1D4B6AFFB13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A8C961-8893-4F3B-93C9-1D4B6AFFB13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A8C961-8893-4F3B-93C9-1D4B6AFFB13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A8C961-8893-4F3B-93C9-1D4B6AFFB13A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E75AA21-CADD-4D2B-AAF8-E13DD300A38A} = {1D6585DC-9E86-4680-B73F-A43D77DB04C4}
+		{D1A8C961-8893-4F3B-93C9-1D4B6AFFB13A} = {1D6585DC-9E86-4680-B73F-A43D77DB04C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8197D8E0-A03F-4AFB-8D23-AB7E0C2AD6E3}

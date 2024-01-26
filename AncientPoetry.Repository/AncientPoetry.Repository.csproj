@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AncientPoetry.DbStructure\AncientPoetry.DbStructure.csproj" />
+    <ProjectReference Include="..\AncientPoetry.IRepository\AncientPoetry.IRepository.csproj" />
+  </ItemGroup>
+
+</Project>
