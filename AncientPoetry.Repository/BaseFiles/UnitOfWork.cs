@@ -8,11 +8,13 @@ namespace AncientPoetry.Repository.BaseFiles
     {
         private readonly ApplicationDbContext _db;
         public IDynastyRepository Dynasty { get; private set; }
+        public IPoetRepository Poet { get; private set; }
 
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
             Dynasty = new DynastyRepository(_db);
+            Poet = new PoetRepository(_db);
 
         }
 
