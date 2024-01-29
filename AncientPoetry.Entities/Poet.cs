@@ -1,4 +1,5 @@
 ﻿using AncientPoetry.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AncientPoetry.Entities
@@ -11,6 +12,7 @@ namespace AncientPoetry.Entities
         /// <summary>
         /// 姓名
         /// </summary>
+        [Required]
         public string Name { get; set; }
         /// <summary>
         /// 描述
