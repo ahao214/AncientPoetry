@@ -4,6 +4,7 @@
     {
         IDynastyRepository Dynasty { get; }
         IPoetRepository Poet { get; }
+        IPoemRepository Poem { get; }
         void Save();
     }
 }
