@@ -6,7 +6,8 @@
         IPoetRepository Poet { get; }
         IPoemRepository Poem { get; }
         IFamoutPhraseRepository FamoutPhrase { get; }
-
+        IProblemTypeRepository ProblemType { get; }
+        IProblemRepository Problem { get; }
 
 
         void Save();

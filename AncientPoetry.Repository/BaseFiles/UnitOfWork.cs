@@ -11,6 +11,8 @@ namespace AncientPoetry.Repository.BaseFiles
         public IPoetRepository Poet { get; private set; }
         public IPoemRepository Poem { get; private set; }
         public IFamoutPhraseRepository FamoutPhrase { get; private set; }
+        public IProblemTypeRepository ProblemType { get; private set; }
+        public IProblemRepository Problem { get; private set; }
 
         public UnitOfWork(ApplicationDbContext db)
         {
@@ -19,6 +21,8 @@ namespace AncientPoetry.Repository.BaseFiles
             Poet = new PoetRepository(_db);
             Poem = new PoemRepository(_db);
             FamoutPhrase = new FamoutPhraseRepository(_db);
+            ProblemType = new ProblemTypeRepository(_db);
+            Problem = new ProblemRepository(_db);
 
         }
 
