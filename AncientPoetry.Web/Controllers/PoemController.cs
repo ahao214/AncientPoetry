@@ -18,14 +18,14 @@ namespace AncientPoetry.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var poem = _unitOfWork.Poem.GetAll();
+            return View(poem);
         }
 
         #region 创建
 
         public IActionResult Create()
         {
-
             return View();
         }
 
@@ -35,6 +35,33 @@ namespace AncientPoetry.Web.Controllers
             if (ModelState.IsValid)
             {
                 _unitOfWork.Poem.Add(poem);
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+
+
+        #endregion
+
+        #region 编辑
+
+        public IActionResult Edit(int id)
+        {
+            Poem? poem = _unitOfWork.Poem.Get(u => u.Id == id);
+            if (poem == null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+            return View(poem);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Poem poem)
+        {
+            if (ModelState.IsValid && poem.Id > 0)
+            {
+                _unitOfWork.Poem.Update(poem);
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }

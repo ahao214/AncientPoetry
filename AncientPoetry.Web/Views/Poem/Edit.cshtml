@@ -4,12 +4,13 @@
     <div class="card-header bg-success bg-gradient m-lg-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">Create Poem</h2>
+                <h2 class="text-white py-2">Edit Poem</h2>
             </div>
         </div>
     </div>
     <div class="card-body border p-4">
         <form method="post" class="row" enctype="multipart/form-data">
+            <input asp-for="Id" hidden />
             <div class="p-3">
                 @* <div asp-validation-summary="ModelOnly"></div> *@
                 <div class="form-floating py-2 col-12">
@@ -27,7 +28,7 @@
                     <label asp-for="DynastyName" class="ms-2"></label>
                     <span asp-validation-for="DynastyName" class="text-danger"></span>
                 </div>
-                <div class="form-floating py-2 col-12">                    
+                <div class="form-floating py-2 col-12">
                     <textarea asp-for="Context" class="ms-2"></textarea>
                     <label asp-for="Context" class="ms-2"></label>
                     <span asp-validation-for="Context" class="text-danger"></span>
@@ -35,13 +36,13 @@
 
                 <div class="form-floating py-2 col-12">
                     <input asp-for="Remark" class="form-control border shadow" />
-                    <label asp-for="Remark" class="ms-2"></label>                    
+                    <label asp-for="Remark" class="ms-2"></label>
                 </div>
 
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">
                         <button type="submit" class="btn btn-success w-100">
-                            <i class="bi bi-check-circle"></i> Create
+                            <i class="bi bi-check-circle"></i> Edit
                         </button>
                     </div>
                     <div class="col-6 col-md-3">
