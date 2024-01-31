@@ -13,7 +13,7 @@ namespace AncientPoetry.Entities
         /// 题目
         /// </summary>
         [Required]
-        public string Titel { get; set; }
+        public string Title { get; set; }
         /// <summary>
         /// 作者
         /// </summary>        
