@@ -16,6 +16,11 @@ namespace AncientPoetry.DbStructure.DbContexts
         public DbSet<Poet> Poets { get; set; }
         public DbSet<Poem> Poems { get; set; }
         public DbSet<FamoutPhrase> FamoutPhrases { get; set; }
+        public DbSet<ProblemType> ProblemTypes { get; set; }
+        public DbSet<Problem> Problems { get; set; }
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
