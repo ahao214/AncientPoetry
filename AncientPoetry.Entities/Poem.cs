@@ -13,17 +13,15 @@ namespace AncientPoetry.Entities
         /// 题目
         /// </summary>
         [Required]
-        public string Name { get; set; }
+        public string Titel { get; set; }
         /// <summary>
         /// 作者
+        /// </summary>        
+        public string? Author { get; set; }
+        /// <summary>
+        /// 朝代名称
         /// </summary>
-        [ForeignKey("Poet")]
-        public int PoetId { get; set; }
-
-        public Poet Poet { get; set; }
-
-        //前言
-        public string? Preface { get; set; }
+        public string? DynastyName { get; set; }
 
         /// <summary>
         /// 内容
@@ -34,6 +32,10 @@ namespace AncientPoetry.Entities
         /// 讲解
         /// </summary>
         public string? Explain { get; set; }
+        /// <summary>
+        /// 创作背景
+        /// </summary>
+        public string? CreateBackground { get; set; }
         /// <summary>
         /// 体裁
         /// </summary>
